@@ -15,6 +15,8 @@ if strings.Count(ex, "@") == 1 {
 	p := []rune(pt)
         str := []rune(ex)
 
+	if string(str[0]) != "@" && string(str[0]) != " " && strings.Count(ex, ".") == 2 {
+
         rxm := make([][]bool, len(str)+1)
 
         for i := range rxm{
@@ -85,7 +87,9 @@ if strings.Count(ex, "@") == 1 {
 
 	}
 
-
+	}else {
+		fmt.Println("Invalid Email")
+	}
 }else {
                 fmt.Println("Invalid Expression")
         }

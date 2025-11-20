@@ -64,6 +64,28 @@ if strings.Count(ex, "@") == 1 {
         }
 
 	result = rxm[len(str)][len(p)]
+	fmt.Printf("\t")
+	for r:=0; r<len(p); r++ {
+ 		fmt.Printf("\t%v", string(p[r]))
+	}
+
+	fmt.Printf("\n\n")
+
+	for i:=0; i<=len(str); i++{
+		for j:=0; j<=len(p); j++ {
+
+			fmt.Printf("\t%t", rxm[i][j])
+		}
+
+		fmt.Printf("\n\n")
+
+		if (i<len(str)){
+		fmt.Printf("%v",string(str[i]))
+		}
+
+	}
+
+
 }else {
                 fmt.Println("Invalid Expression")
         }
